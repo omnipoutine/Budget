@@ -27,5 +27,13 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },{
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "markdown-pages",
+      "path": `${__dirname}/src/markdown-pages/`
+    },
+    __key: "markdown-pages"
+  },
+`gatsby-transformer-remark`,]
 };
