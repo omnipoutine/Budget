@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Card from '../components/card'
 import SectionHeader from '../components/sectionHeader'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 const SiteWrapper = styled.div`
 div{
   width:100$;
@@ -88,6 +89,7 @@ h1{
 `
 
 const Index = ({data}) => {
+  
 
   return(
     <SiteWrapper>
@@ -110,8 +112,10 @@ const Index = ({data}) => {
             <div className="sectionTitleDiv">
               <SectionHeader title="Projects - 02"/>
             </div>
-            {data.allMarkdownRemark.edges.map((item, i) => (item.node.frontmatter ? (<Card title={item.node.frontmatter.slug} description={item.node.frontmatter.title}></Card>):(<div></div>)))}
+            {data.allMarkdownRemark.edges.map((item, i) => (item.node.frontmatter ? (<div><Card title={item.node.frontmatter.slug} description={item.node.frontmatter.title} image={getImage(item.node.frontmatter.imglink)} alt="image"></Card> </div>
+            ):(<div></div>)))}
             <Card title="MFMSPORTAL WEBSITE" description="An online learning platform for montessori school" img="./pexels-gradienta-6985048.jpgicon.png" ></Card>
+            
           </section>
         </IndexWrapper>
       </Layout>
@@ -129,6 +133,15 @@ export const query = graphql`
             slug
             date
             title
+            imglink {
+              childImageSharp {
+                gatsbyImageData(
+                  width : 200
+                  placeholder : BLURRED
+                  formats : [AUTO,WEBP,AVIF]
+                )
+              }
+            }
           }
         }
       }
