@@ -33,6 +33,18 @@ h2{
     font-size: 1.5rem;
     letter-spacing:1px;
 }
+p{
+    font-size:1.1rem;
+    font-weight:300;
+    letter-spacing:0.5px;
+}
+ul{
+    list-styling:none;
+    a{
+        color:white;
+        text-decoration:none;
+    }
+}
 #cardHeader{
     font-weight:700;
     font-size:3rem;
@@ -40,6 +52,27 @@ h2{
 }
 #cardDescription{
     font-size:1.5rem;
+}
+
+@media only screen and (min-width:819px){
+    h1{
+        font-size:10rem;
+    }
+    h2{
+        font-size:3rem;
+    }
+    
+    p{
+        font-size:2.25rem;
+    }
+    #cardHeader{
+        
+        font-size:4rem;
+        
+    }
+    #cardDescription{
+        font-size:2rem;
+    }
 }
 `
 

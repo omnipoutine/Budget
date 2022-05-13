@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CardDiv = styled.div`
-
+width:100%;
 `
 
 
@@ -16,7 +16,7 @@ const Card = (props) => {
             <div>
                 <img src={props.img} alt={props.alt}></img>
             </div>
-            <hr></hr>
+            {/* <hr></hr> */}
         </CardDiv>
     )
 }

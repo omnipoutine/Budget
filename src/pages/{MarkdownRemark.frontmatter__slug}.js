@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from "gatsby"
+import Layout from '../components/layout'
 const ProjectContainer = styled.div`
 
 `
@@ -10,7 +11,9 @@ const Project = ({data}) => {
     const { frontmatter, html } = markdownRemark
     return(
         <div>
+          <Layout>
             {frontmatter.title}
+          </Layout>
         </div>
     )
 }

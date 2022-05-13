@@ -91,6 +91,9 @@ li:hover{
   hr{opacity:70%;
 }
 }
+@media only screen and (min-width:819px){
+    padding-left:2rem;
+}
 `
 
 const NavLabel = styled.p`
@@ -121,11 +124,11 @@ const Navbar = () => {
             <MenuLink nav={nav}>
             
                 <ul>
-                    <li><a href="/">00 - Home</a>
+                    <li><a href="/" >00 - Home</a>
                     <hr/>
                     </li>
                     
-                    <li><a href="/">01 - About</a>
+                    <li><a href="#about" onClick ={() => {showNav(!nav);}}>01 - About</a>
                     <hr/>
                     </li>
                     
@@ -133,7 +136,7 @@ const Navbar = () => {
                     <hr/>
                     </li>
                     
-                    <li><a href="/">03 - Contact</a>
+                    <li><a href="#contact" onClick ={() => {showNav(!nav);}} >03 - Contact</a>
                     <hr/>
 
                     </li>

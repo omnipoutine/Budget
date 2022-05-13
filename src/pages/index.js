@@ -1,7 +1,9 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import Card from '../components/card'
+import SectionHeader from '../components/sectionHeader'
 const SiteWrapper = styled.div`
 div{
   width:100$;
@@ -13,7 +15,7 @@ display:flex;
 flex-direction:column;
 align-items:start;
 justify-content:center;
-padding-left:2rem;
+padding-left:1rem;
 h1{
   margin-top:15rem;
   margin-bottom:15rem;
@@ -23,6 +25,10 @@ h1{
 }
 #about{
   width:90%;
+  #aboutParagraphContainer{
+    width:100%;
+    margin-bottom:10rem;
+  }
   h3{
     
     margin-bottom:3rem;
@@ -43,22 +49,46 @@ h1{
   }
   p{
     
-    font-size:1.1rem;
-    font-weight:300;
-    letter-spacing:0.5px;
+    
     margin-bottom:5rem;
   }
 }
+.sectionTitleDiv{
+  margin-bottom:10rem;
+}
+
 #projects{
   width:90%;
   h3{
     margin-bottom:3rem;
   }
 }
+@media only screen and (min-width:819px){
+  padding-left:2rem;
+#about{
+  
+  width:95%;
+  h2{
+    
+  }
+  #aboutParagraphContainer{
+    p{
+      margin-bottom:10rem;
+    }
+    width:95%;
+    margin-top:10rem;
+    margin-bottom:20rem;
+  }
+}
 
+}
+#projects{
+  width:95%;
+}
 `
 
-const Index = () => {
+const Index = ({data}) => {
+
   return(
     <SiteWrapper>
       <Layout>
@@ -67,25 +97,45 @@ const Index = () => {
           <h1>Niko<br/>lai<br/>Whitt<br/>aker</h1>
           
           <section id="about">
-            <h3>About Me - 01</h3>
-            <hr></hr>
+            <div className="sectionTitleDiv">
+            <SectionHeader title="About me - 01" id="aboutTitle"/>
+            </div>
             <h2>Web Developer based in Ottawa, Ontario. Currently looking for Work</h2>
+            <div id="aboutParagraphContainer">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
           </section>
           <section id="projects">
-          <h3>Projects - 01</h3>
-            <hr></hr>
+            <div className="sectionTitleDiv">
+              <SectionHeader title="Projects - 02"/>
+            </div>
+            {data.allMarkdownRemark.edges.map((item, i) => (item.node.frontmatter ? (<Card title={item.node.frontmatter.slug} description={item.node.frontmatter.title}></Card>):(<div></div>)))}
             <Card title="MFMSPORTAL WEBSITE" description="An online learning platform for montessori school" img="./pexels-gradienta-6985048.jpgicon.png" ></Card>
-          </section>
-          <section>
-            
           </section>
         </IndexWrapper>
       </Layout>
-
+    
     </SiteWrapper>
   )
 }
 
+export const query = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            slug
+            date
+            title
+          }
+        }
+      }
+    }
+  }
+`
+
 export default Index
+
+
