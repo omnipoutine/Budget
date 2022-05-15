@@ -56,9 +56,10 @@ ul{
     }
 }
 #cardHeader{
-    font-weight:500;
-    font-size:3.5rem;
+    font-weight:700;
+    font-size:3rem;
     letter-spacing:0px;
+    text-transform:uppercase;
 }
 #cardDescription{
     font-size:1.5rem;
@@ -69,7 +70,7 @@ ul{
         font-size:10rem;
     }
     h2{
-        font-size:3rem;
+        font-size:2.5rem;
     }
     
     p{
@@ -77,7 +78,7 @@ ul{
     }
     #cardHeader{
         
-        font-size:4rem;
+        font-size:7rem;
         
     }
     #cardDescription{
@@ -86,8 +87,14 @@ ul{
 }
 @media only screen and (min-width:1200px){
     h2{
-        font-size:4rem;
+        font-size:3rem;
         
+    }
+    p{
+        font-size:1.5rem;
+    }
+    #cardHeader{
+        font-size:2rem;
     }
 }
 

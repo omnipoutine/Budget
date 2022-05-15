@@ -6,9 +6,6 @@ import Card from '../components/card'
 import SectionHeader from '../components/sectionHeader'
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 const SiteWrapper = styled.div`
-div{
-  width:100$;
-}
 
 `
 const IndexWrapper = styled.div`
@@ -28,6 +25,10 @@ padding-left:1rem;
   margin-bottom:2rem;
   padding-bottom:2rem;
   box-sizing: border-box;
+}
+.cardDiv{
+  
+  margin-bottom:10rem;
 }
 h1{
   margin-bottom:1rem;
@@ -55,7 +56,7 @@ h1{
     
   }
   h2{
-    margin-top:5rem;
+    margin-top:4rem;
     margin-bottom:10rem;
     
   }
@@ -72,10 +73,10 @@ h1{
 #projects{
   width:90%;
   h3{
-    margin-bottom:3rem;
+    margin-bottom:5rem;
   }
 }
-@media only screen and (min-width:819px){
+@media only screen and (min-width:768px){
   padding-left:2rem;
 #about{
   
@@ -99,21 +100,42 @@ h1{
 }
 
 @media only screen and (min-width:1200px){
+  padding-left:5rem;
+  #about{
+    h2{
+      width:60%;
+    }
+  }
 
     #aboutParagraphContainer{
+      
       display:flex;
       flex-direction:row;
       justify-content:start;
       
 
       P{
-        font-size:1.75rem;
-        width:35%;
+        margin-top:10rem;
+        font-size:1.3rem;
+        width:30%;
         margin-right:5rem;
       }
     }
     #headerDiv{
       margin-bottom:1rem;
+    }
+    .cardDiv{
+      max-width:30%;
+      margin-bottom:2rem;
+      
+    }
+    #projectsDiv{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      width:95%;
+      align-items:flex-start;
+      flex-wrap:wrap;
     }
 }
 `
@@ -139,12 +161,13 @@ const Index = ({data}) => {
             </div>
           </section>
           <section id="projects">
-            <div className="sectionTitleDiv">
+            <div className="sectionTitleDiv" >
               <SectionHeader title="Projects - 02"/>
             </div>
-            {data.allMarkdownRemark.edges.map((item, i) => (item.node.frontmatter ? (<div><Card title={item.node.frontmatter.slug} description={item.node.frontmatter.title} image={getImage(item.node.frontmatter.imglink)} alt="image"></Card> </div>
+            <div id="projectsDiv">
+            {data.allMarkdownRemark.edges.map((item, i) => (item.node.frontmatter ? (<div className='cardDiv'><Card title={item.node.frontmatter.title} link={item.node.frontmatter.slug} image={getImage(item.node.frontmatter.imglink)} alt="image"></Card> </div>
             ):(<div></div>)))}
-            
+            </div>
             
           </section>
         </IndexWrapper>
@@ -167,6 +190,7 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   width : 800
+                  height: 800
                   placeholder : BLURRED
                   formats : [AUTO,WEBP,AVIF]
                 )

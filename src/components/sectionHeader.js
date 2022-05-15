@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionHeaderWrapper = styled.div`
-
+hr{
+    opacity:0;
+}
 `
 const SectionHeader = (props) => {
 return(

@@ -40,6 +40,9 @@ p{
         width:95%;
     }
 }
+@media only screen and (min-width:1200px){
+    padding-left:5rem;
+}
 `
 const Footer = () =>{
     return(
