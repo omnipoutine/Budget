@@ -15,20 +15,30 @@ body,html{
     background:#161616;
     cursor: url('https://i.imgur.com/p0ArFfo.png'), auto;
 }
+hr{
+    border-color:#696969;
+    opacity:30%;
+    margin-top:2rem;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
 h1{
-    text-transform:uppercase;
+    //text-transform:uppercase;
     line-height:110%;
-    font-size:6rem;
+    font-size:9rem;
+    font-weight:500;
     
   }
 h3{
     text-transform:uppercase;
     font-weight:300;
-    font-size:1rem;
+    font-size:0.75rem;
     letter-spacing:1px;
 }
 h2{
-    text-transform:uppercase;
+    
     font-weight:300;
     font-size: 1.5rem;
     letter-spacing:1px;
@@ -46,15 +56,15 @@ ul{
     }
 }
 #cardHeader{
-    font-weight:700;
-    font-size:3rem;
+    font-weight:500;
+    font-size:3.5rem;
     letter-spacing:0px;
 }
 #cardDescription{
     font-size:1.5rem;
 }
 
-@media only screen and (min-width:819px){
+@media only screen and (min-width:768px){
     h1{
         font-size:10rem;
     }
@@ -74,6 +84,13 @@ ul{
         font-size:2rem;
     }
 }
+@media only screen and (min-width:1200px){
+    h2{
+        font-size:4rem;
+        
+    }
+}
+
 `
 
 

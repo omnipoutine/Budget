@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from 'styled-components'
+import { Link } from "gatsby"
 const MenuIcon = styled.button`
 position:fixed;
 padding:0;
@@ -8,9 +9,10 @@ right: 2rem;
 display:flex;
 justify-content: center;
 align-items:center;
- width: 5rem;
- height: 5rem;
+ width: 6rem;
+ height: 6rem;
  border-radius:70px;
+ 
  cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;
 transition: background 150ms linear;
  background: ${({nav}) => nav ? "rgba(0,0,0,0)": "#161616"};
@@ -23,8 +25,9 @@ transition: background 150ms linear;
 p{
     position:absolute;
     color:white;
-    font-size:1.5rem;
+    font-size:1rem;
     cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;
+    padding:1rem;
 }
 p:hover{
 
@@ -77,8 +80,7 @@ a{
 
 hr{
     width:90%;
-    border-color:#696969;
-    opacity:30%;
+    
     margin-bottom:1rem;
     
 }
@@ -124,19 +126,19 @@ const Navbar = () => {
             <MenuLink nav={nav}>
             
                 <ul>
-                    <li><a href="/" >00 - Home</a>
+                    <li><Link to="/" onClick ={() => {showNav(!nav);}}>00 - Home</Link>
                     <hr/>
                     </li>
                     
-                    <li><a href="#about" onClick ={() => {showNav(!nav);}}>01 - About</a>
+                    <li><Link to="/#about" onClick ={() => {showNav(!nav);}}>01 - About</Link>
                     <hr/>
                     </li>
                     
-                    <li><a href="/">02 - Projects</a>
+                    <li><Link to="/#projects" onClick ={() => {showNav(!nav);}}>02 - Projects</Link>
                     <hr/>
                     </li>
                     
-                    <li><a href="#contact" onClick ={() => {showNav(!nav);}} >03 - Contact</a>
+                    <li><Link to="#contact" onClick ={() => {showNav(!nav);}} >03 - Contact</Link>
                     <hr/>
 
                     </li>

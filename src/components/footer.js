@@ -35,7 +35,11 @@ p{
     margin-bottom:2rem;
 }
 
-@media and screen only()
+@media only screen and (min-width:768px){
+    hr{
+        width:95%;
+    }
+}
 `
 const Footer = () =>{
     return(

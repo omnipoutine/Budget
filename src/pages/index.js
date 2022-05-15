@@ -17,12 +17,23 @@ flex-direction:column;
 align-items:start;
 justify-content:center;
 padding-left:1rem;
+
+#headerDiv{
+  height:60vh;
+  display: flex;
+  flex-direction:column-reverse;
+  
+  align-items:flex-start;
+  justify-content:end;
+  margin-bottom:2rem;
+  padding-bottom:2rem;
+  box-sizing: border-box;
+}
 h1{
-  margin-top:15rem;
-  margin-bottom:15rem;
-  background: -webkit-linear-gradient(#F9F9F9, #7b7b7b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom:1rem;
+  margin-top:0;
+  color:white;
+  
 }
 #about{
   width:90%;
@@ -32,20 +43,20 @@ h1{
   }
   h3{
     
-    margin-bottom:3rem;
+    margin-bottom:2rem;
   }
   hr{
     
     border-color:#696969;
-    opacity:90%;
+    opacity:0%;
     margin-bottom:3rem;
     margin-left:0;
     padding-left:0;
     
   }
   h2{
-    
-    margin-bottom:5rem;
+    margin-top:5rem;
+    margin-bottom:10rem;
     
   }
   p{
@@ -55,7 +66,7 @@ h1{
   }
 }
 .sectionTitleDiv{
-  margin-bottom:10rem;
+  margin-bottom:2rem;
 }
 
 #projects{
@@ -70,7 +81,7 @@ h1{
   
   width:95%;
   h2{
-    
+   margin-top:0; 
   }
   #aboutParagraphContainer{
     p{
@@ -86,6 +97,25 @@ h1{
 #projects{
   width:95%;
 }
+
+@media only screen and (min-width:1200px){
+
+    #aboutParagraphContainer{
+      display:flex;
+      flex-direction:row;
+      justify-content:start;
+      
+
+      P{
+        font-size:1.75rem;
+        width:35%;
+        margin-right:5rem;
+      }
+    }
+    #headerDiv{
+      margin-bottom:1rem;
+    }
+}
 `
 
 const Index = ({data}) => {
@@ -95,9 +125,9 @@ const Index = ({data}) => {
     <SiteWrapper>
       <Layout>
         <IndexWrapper>
-          
-          <h1>Niko<br/>lai<br/>Whitt<br/>aker</h1>
-          
+          <div id="headerDiv">
+          <h1>Niko</h1>
+          </div>
           <section id="about">
             <div className="sectionTitleDiv">
             <SectionHeader title="About me - 01" id="aboutTitle"/>
@@ -114,7 +144,7 @@ const Index = ({data}) => {
             </div>
             {data.allMarkdownRemark.edges.map((item, i) => (item.node.frontmatter ? (<div><Card title={item.node.frontmatter.slug} description={item.node.frontmatter.title} image={getImage(item.node.frontmatter.imglink)} alt="image"></Card> </div>
             ):(<div></div>)))}
-            <Card title="MFMSPORTAL WEBSITE" description="An online learning platform for montessori school" img="./pexels-gradienta-6985048.jpgicon.png" ></Card>
+            
             
           </section>
         </IndexWrapper>
@@ -136,7 +166,7 @@ export const query = graphql`
             imglink {
               childImageSharp {
                 gatsbyImageData(
-                  width : 200
+                  width : 800
                   placeholder : BLURRED
                   formats : [AUTO,WEBP,AVIF]
                 )
