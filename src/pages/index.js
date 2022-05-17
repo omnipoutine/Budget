@@ -16,6 +16,7 @@ justify-content:center;
 padding-left:1rem;
 
 #headerDiv{
+  width:100%;
   height:60vh;
   display: flex;
   flex-direction:column-reverse;
@@ -25,6 +26,9 @@ padding-left:1rem;
   margin-bottom:2rem;
   padding-bottom:2rem;
   box-sizing: border-box;
+}
+#headerDiv:hover{
+  cursor: url('https://i.imgur.com/jjXIXO5.png'), auto;
 }
 .cardDiv{
   
@@ -126,7 +130,7 @@ h1{
     }
     .cardDiv{
       max-width:30%;
-      margin-bottom:2rem;
+      margin-bottom:0rem;
       
     }
     #projectsDiv{

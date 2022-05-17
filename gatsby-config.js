@@ -34,6 +34,18 @@ module.exports = {
       "path": `${__dirname}/src/markdown-pages/`
     },
     __key: "markdown-pages"
-  },
-`gatsby-transformer-remark`,]
+  },{
+resolve: `gatsby-transformer-remark`,
+options: {
+  plugins: [
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 800,
+      },
+    },
+  ],
+},
+  }
+]
 };

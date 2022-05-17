@@ -13,13 +13,13 @@ padding-left:1rem;
 ul{
     margin-bottom:4rem;
     list-style:none;
-    text-transform:uppercase;
+    
     padding-left:0;
     li{
         margin-bottom:1rem;
 
         a{
-            font-size:1.5rem;
+            font-size:1.2rem;
             font-weight:300;
             
         }
@@ -31,7 +31,7 @@ ul{
 }
 p{
     text-transform:uppercase;
-    font-size:1rem;
+    font-size:0.75rem;
     margin-bottom:2rem;
 }
 

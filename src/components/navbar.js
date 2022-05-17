@@ -46,8 +46,8 @@ const MenuLink = styled.nav`
 background:rgba(22,22,22,0.98);
 display:flex;
 flex-direction: column;
-justify-content: center;
-align-items: start;
+justify-content:center;
+align-items: center;
 text-align:left;
 height:100vh;
 width:100%;
@@ -65,36 +65,62 @@ ul{
     padding:0;
 }
 li{
-    margin-bottom:2rem;
+    margin-bottom:1rem;
 
 a{
     text-decoration: none;
     color: white;
     font-size:3rem;
-    text-transform: uppercase;
+    text-transform:uppercase;
     margin-left:1rem;
     padding-bottom:1rem;
-    font-weight:300;
+    font-weight:500;
     transition: font-weight 25ms ease-out;
 }
 
 hr{
     width:90%;
-    
+    opacity:0;
     margin-bottom:1rem;
     
 }
 }
 li:hover{
     
-  a{  font-weight:700;
+  a{  
+    
+        color:white;
+    
     cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;    
 }
-  hr{opacity:70%;
-}
+  
+
 }
 @media only screen and (min-width:819px){
     padding-left:2rem;
+    ul{
+        li{
+            a{
+                
+
+                
+                font-size:5rem;
+            }
+        }
+    }
+    
+}
+@media only screen and (min-width:1200px){
+    ul{
+        li{
+            a{
+                color:rgba(0,0,0,0);
+        -webkit-text-fill-color: none; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+            }
+        }
+    }
 }
 `
 
@@ -126,19 +152,19 @@ const Navbar = () => {
             <MenuLink nav={nav}>
             
                 <ul>
-                    <li><Link to="/" onClick ={() => {showNav(!nav);}}>00 - Home</Link>
+                    <li><Link to="/" onClick ={() => {showNav(!nav);}}>Home</Link>
                     <hr/>
                     </li>
                     
-                    <li><Link to="/#about" onClick ={() => {showNav(!nav);}}>01 - About</Link>
+                    <li><Link to="/#about" onClick ={() => {showNav(!nav);}}>About</Link>
                     <hr/>
                     </li>
                     
-                    <li><Link to="/#projects" onClick ={() => {showNav(!nav);}}>02 - Projects</Link>
+                    <li><Link to="/#projects" onClick ={() => {showNav(!nav);}}>Projects</Link>
                     <hr/>
                     </li>
                     
-                    <li><Link to="#contact" onClick ={() => {showNav(!nav);}} >03 - Contact</Link>
+                    <li><Link to="#contact" onClick ={() => {showNav(!nav);}} >Contact</Link>
                     <hr/>
 
                     </li>
