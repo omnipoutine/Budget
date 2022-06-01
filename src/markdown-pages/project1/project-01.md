@@ -1,7 +1,7 @@
 ---
 slug: "/project-one"
 date: "2022-02-02"
-title: "Tester Project"
+title: "01 - Tester Project"
 description: "Short Project Description"
 imglink: "../../images/pexels-henry-&-co-10007531.jpg"
 ---

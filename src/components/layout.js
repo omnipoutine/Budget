@@ -2,100 +2,101 @@ import * as React from "react"
 import Navbar from "./navbar"
 import Footer from "./footer"
 import styled,{createGlobalStyle} from 'styled-components'
-
+import { useRef } from "react"
 const Global = createGlobalStyle`
+:root{
 
+//Text Sizes
+--header-text  : 2.5rem;
+--about-header : 3rem;
+--secondary-text : 1rem;
+--paragraph-text : 0.9rem;
+
+//colours
+--transparent-color : rgba(0,0,0,0);
+--main-bg : #161616;
+--card-secondary: #222222;
+
+//Spacing
+--nav-padding: 1rem;
+--card-padding: 2rem;
+--index-padding: 1rem;
+--header-top: 8rem;
+--header-bottom: 2rem;
+--paragraph-padding : 0 rem;
+--project-margin: 5rem;
+
+--paragraph-width : 100%;
+--card-height: 450px;
+--border-sizing: 20px;
+
+@media only screen and (min-width: 768px){
+    //Text Sizes
+    --header-text  : 5rem;
+    --secondary-text : 1.5rem;
+    --paragraph-text : 1rem;
+
+    //SPacing
+    --index-padding:2rem;
+    --paragraph-padding: 30%;
+
+    --card-max:49%;
+    --paragraph-width: 60%;
+    --card-height:700px;
+}
+
+@media only screen and (min-width: 1200px){
+    //Text Sizes
+    --header-text  : 3rem;
+    --secondary-text : 1.4rem;
+    --paragraph-text : 1.2rem;
+
+    --paragraph-width:700px;
+}
+
+
+}
 body,html{
+    
+    width:100%;
     margin:0;
     padding:0;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi',Arial, sans-serif;
     overflow-x: hidden;
     color:white;
-    max-width:100%;
+    
     background:#161616;
     cursor: url('https://i.imgur.com/p0ArFfo.png'), auto;
 }
-hr{
-    border-color:#696969;
-    opacity:30%;
-    margin-top:2rem;
-}
+
 a{
     text-decoration:none;
     color:white;
 }
 h1{
-    //text-transform:uppercase;
+    
     line-height:110%;
-    font-size:9rem;
-    font-weight:500;
+    font-size:var(--header-text);
+    font-weight:300;
     
   }
-h3{
-    text-transform:uppercase;
-    font-weight:300;
-    font-size:0.75rem;
-    letter-spacing:1px;
-}
+
 h2{
     
-    font-weight:300;
-    font-size: 1.5rem;
+    font-weight:400;
+    font-size: var(--secondary-text);
     letter-spacing:1px;
+   
 }
 p{
-    font-size:1.1rem;
+    font-size:var(--paragraph-text);
     font-weight:300;
     letter-spacing:0.5px;
+    color:white;
+    line-height:150%;
 }
 ul{
     list-styling:none;
-    a{
-        color:white;
-        text-decoration:none;
-    }
-}
-#cardHeader{
-    font-weight:700;
-    font-size:3rem;
-    letter-spacing:0px;
-    text-transform:uppercase;
-}
-#cardDescription{
-    font-size:1.5rem;
-}
-
-@media only screen and (min-width:768px){
-    h1{
-        font-size:10rem;
-    }
-    h2{
-        font-size:2.5rem;
-    }
-    
-    p{
-        font-size:2.25rem;
-    }
-    #cardHeader{
-        
-        font-size:7rem;
-        
-    }
-    #cardDescription{
-        font-size:2rem;
-    }
-}
-@media only screen and (min-width:1200px){
-    h2{
-        font-size:3rem;
-        
-    }
-    p{
-        font-size:1.5rem;
-    }
-    #cardHeader{
-        font-size:2rem;
-    }
 }
 
 `

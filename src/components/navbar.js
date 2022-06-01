@@ -1,53 +1,124 @@
 import React, { useState } from "react"
 import styled from 'styled-components'
 import { Link } from "gatsby"
-const MenuIcon = styled.button`
-position:fixed;
-padding:0;
-top: 2rem;
-right: 2rem;
-display:flex;
-justify-content: center;
-align-items:center;
- width: 6rem;
- height: 6rem;
- border-radius:70px;
- 
- cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;
-transition: background 150ms linear;
- background: ${({nav}) => nav ? "rgba(0,0,0,0)": "#161616"};
- border:none;
 
- z-index: 5;
+export const flexColumnCenterCenter = `
+display:flex;
+flex-direction: column;
+justify-content:center;
+align-items:center;
+
+`
+
+
+const MenuIcon = styled.button`
+
+
+${flexColumnCenterCenter}
+background: var(--main-bg);
+
+
+
+ 
+cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;
+
+transition: background 150ms linear;
+
+
+border:none;
+z-index: 5;
  :hover{
     
  }
 p{
-    position:absolute;
-    color:white;
-    font-size:1rem;
-    cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;
-    padding:1rem;
-}
-p:hover{
-
     
-
+    
+    
+    cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;
+    padding:var(--nav-padding);
 }
+
 
 `
 const Container = styled.div`
-    background: #d4d4d4;
-    postion:relative;
-   
+    background: var(--main-bg);
+    position: relative;
+
+   #navHead{
+       
+    padding:var(--nav-padding);
+       
+       z-index:6;
+   }
+   #desktopMenu {
+    display: none ;          
+}
+
+#mobileMenu {
+    background: var(--main-bg);
+    z-index:6;
+    width:100%;
+    top:0;
+    position:fixed;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+@media only screen and (min-width:1200px){
+
+    #desktopMenu{
+        background:var(--main-bg);
+        z-index:5;
+        position:fixed;
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding-left:var(--nav-padding);
+        padding-right:var(--nav-padding);
+        ul{
+            margin-right:var(--nav-padding);
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            list-style:none;
+        li{
+               
+                margin:var(--nav-padding);
+        }
+
+        a{
+                padding: var(--nav-padding);
+                transition: font-weight 50ms ease-in;
+        }
+        #headerLink:hover{
+                cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;  
+                font-weight:500; }
+        }
+        a:hover{
+                cursor:url('https://i.imgur.com/ctO6mJX.png'), auto;  
+                font-weight:500;
+
+        }
+    }
+          
+    #mobileMenu{
+        
+            display:none;
+        
+    }
     
+       
+}   
 `
 const MenuLink = styled.nav`
-background:rgba(22,22,22,0.98);
-display:flex;
-flex-direction: column;
-justify-content:center;
-align-items: center;
+background:var(--main-bg);
+
+${flexColumnCenterCenter}
 text-align:left;
 height:100vh;
 width:100%;
@@ -70,11 +141,11 @@ li{
 a{
     text-decoration: none;
     color: white;
-    font-size:3rem;
-    text-transform:uppercase;
+    font-size:2rem;
+    
     margin-left:1rem;
     padding-bottom:1rem;
-    font-weight:500;
+    font-weight:300;
     transition: font-weight 25ms ease-out;
 }
 
@@ -110,18 +181,7 @@ li:hover{
     }
     
 }
-@media only screen and (min-width:1200px){
-    ul{
-        li{
-            a{
-                color:rgba(0,0,0,0);
-        -webkit-text-fill-color: none; /* Will override color (regardless of order) */
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-            }
-        }
-    }
-}
+
 `
 
 const NavLabel = styled.p`
@@ -144,11 +204,24 @@ const Navbar = () => {
     }
     return ( 
         <Container>
+            <div id="desktopMenu">
+                <Link to='/' id="headerLink">NIKOLAI WHITTAKER</Link>
+                <div>
+                    <ul>
+                        <li><Link to='/#projects'>WORK</Link></li>
+                        <li><Link to='#footer'>CONTACT</Link></li>
+                        <li><Link to='/about'>ABOUT</Link></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mobileMenu">
+            <div id="navHead"><Link to="/">NIKOLAI WHITTAKER</Link></div>
             <MenuIcon nav={nav}
             onClick ={() => {showNav(!nav);}}>
                 {menuButton}
                 
             </MenuIcon>
+            </div>
             <MenuLink nav={nav}>
             
                 <ul>

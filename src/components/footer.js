@@ -35,11 +35,7 @@ p{
     margin-bottom:2rem;
 }
 
-@media only screen and (min-width:768px){
-    hr{
-        width:95%;
-    }
-}
+
 @media only screen and (min-width:1200px){
     padding-left:5rem;
 }
@@ -47,7 +43,7 @@ p{
 const Footer = () =>{
     return(
         <FooterContainer id="contact">
-            <SectionHeader title="contact - 03" />
+            <h1>Get in Contact.</h1>
             
             <ul>
                 <li><a href='linkedin.com'>Linkedin</a></li>

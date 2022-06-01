@@ -2,38 +2,38 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from "gatsby"
 import Layout from '../components/layout'
+import { flexColumnCenterCenter } from '../components/navbar'
 const ProjectContainer = styled.div`
-margin-top:10rem;
-padding-left:2rem;
+
+padding:var(--index-padding);
+padding-top:10rem;
 a{
   text-transform:uppercase;
   font-weight:300;
-  font-size:0.75rem;
+  
   letter-spacing:1px;
-  padding:1rem;
+  padding:var(--index-padding);
   padding-left:0;
 }
 .project-content{
-  
-  width:90%;
   h1{
-    font-size:5rem;
+    margin-bottom: var(--project-margin);
   }
+  
   h2{
-    margin-bottom:5rem;
+    margin-bottom: var(--project-margin);
   }
+  
   p{
-    margin-bottom:5rem;
+    margin-bottom: var(--project-margin);
+    
   }
   
   @media only screen and (min-width:768px){
-    h1{
-      font-size:8rem;
-
-    }
+    
     h2{
-      font-size:4rem;
-      margin-bottom:10rem;
+      
+      
       
     }
     p{
@@ -43,17 +43,36 @@ a{
 }
 @media only screen and (min-width:768px){
 
-  padding-left:5rem;
-  p{
-    font-size:1.5rem;
+  
+  .project-content p:nth-child(3), p:nth-child(4){
+
+    
     width:70%;
+    
   }
 }
-@media only screen and (min-width:1200px){
-p{
-  width:30%;
-  font-size:1.25rem;
 }
+@media only screen and (min-width:1200px){
+  a{
+    padding-left:20%;
+  }
+  padding-top: 30vh;
+  width:100%;
+  .project-content{
+    
+    ${flexColumnCenterCenter}
+    width:100%;
+  }
+      
+  .project-content p:nth-child(3), p:nth-child(4){
+
+    
+    width: var(--paragraph-width);
+    
+  }
+  p ,h1,h2{
+    width: var(--paragraph-width);
+  }
 }`
 
 const Project = ({data}) => {
