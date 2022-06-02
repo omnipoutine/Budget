@@ -6,6 +6,7 @@ import '../components/layout.css'
 const Missing = styled.div`
 background:#161616;
 font-family: 'Satoshi',Arial, sans-serif;
+color: white;
 `
 
 const NotFoundPage = () => {

@@ -16,6 +16,11 @@ padding-top:10rem;
   padding-left:0;
 }
 .project-content{
+  p:nth-child(1){
+    
+    margin-bottom: calc(var(--project-margin) * 0.5);
+  }
+
   a{
     text-decoration: underline;
     margin-right:var(--index-padding);

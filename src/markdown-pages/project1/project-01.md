@@ -5,11 +5,13 @@ title: "01 - Adriane Spence"
 description: "Portfolio for Industrial Designer Adriane Spence"
 imglink: "../../images/vale.png"
 ---
+[Link to Project](https://dazzling-pika-20e680.netlify.app/) [Link to Repository](https://github.com/omnipoutine/adriane-spence-portfolio)
+
 # Adriane Spence
 
 ## U.I. Design and Development.
 
-[Link to Project](https://dazzling-pika-20e680.netlify.app/) [Link to Repository](https://github.com/omnipoutine/adriane-spence-portfolio)
+
 
 
 
