@@ -36,9 +36,10 @@ padding:var(--index-padding);
 
 
 #headerDiv{
+
   height:60vh;
   ${flexColumnEndCenter}
-  padding-top: 4rem;
+  padding-top: 10rem;
   margin-bottom:var(--header-top);
   padding-bottom:var(--header-bottom);
 
