@@ -23,8 +23,8 @@ To easily allow content to be published by Adriane, each project page and the ab
 
 
 
-![ALT TEXT](../../images/pexels-athena-3095523.jpg)
+![ALT TEXT](../../images/as1.png)
 
-![ALT TEXT](../../images/pexels-athena-3095523.jpg)
+![ALT TEXT](../../images/as2.png)
 
-![ALT TEXT](../../images/pexels-athena-3095523.jpg)
+![ALT TEXT](../../images/as3.png)

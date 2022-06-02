@@ -14,10 +14,11 @@ padding-top:10rem;
   letter-spacing:1px;
   padding:var(--index-padding);
   padding-left:0;
+  
 }
 .project-content{
   p:nth-child(1){
-    
+    margin-top: var(--project-margin);
     margin-bottom: calc(var(--project-margin) * 0.5);
   }
 
@@ -35,7 +36,9 @@ padding-top:10rem;
   
   p{
     margin-bottom: var(--project-margin);
-    
+    img{
+      border-radius: var(--border-sizing);
+    }
   }
   
   @media only screen and (min-width:768px){
