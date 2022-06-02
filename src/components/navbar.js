@@ -209,8 +209,8 @@ const Navbar = () => {
                 <div>
                     <ul>
                         <li><Link to='/#projects'>WORK</Link></li>
-                        <li><Link to='#footer'>CONTACT</Link></li>
-                        <li><Link to='/about'>ABOUT</Link></li>
+                        <li><Link to='#contact'>CONTACT</Link></li>
+                        <li><Link to='/#about'>ABOUT</Link></li>
                     </ul>
                 </div>
             </div>

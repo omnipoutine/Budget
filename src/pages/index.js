@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Card from '../components/card'
 import SectionHeader from '../components/sectionHeader'
-import { getImage, GatsbyImage } from 'gatsby-plugin-image'
+import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 const flexColumnCenterCenter =`
 display:flex;
@@ -59,11 +59,15 @@ padding:var(--index-padding);
 #about{
   ${flexColumnCenterCenter}
   width:100%;
+  h1{
+    padding-left:var(--paragraph-padding);
+  }
   #aboutParagraphContainer{
-    width:100%;
+    width: var(--paragraph-width);
+    
     p{
       padding-left: var(--paragraph-padding);
-      width: var(--paragraph-width);
+      
     }
     
 
@@ -92,6 +96,14 @@ padding:1.5rem;
     flex-wrap:wrap;
     justify-content:space-evenly;
   }
+  #about{
+    flex-direction:row;
+    justify-content:space-evenly;
+    
+    
+    
+    
+  }
 }
 
 
@@ -116,15 +128,15 @@ const Index = ({data}) => {
             
           </section>
           <section id="about">
-            <div className="sectionTitleDiv">
             
-            </div>
             
             <div id="aboutParagraphContainer">
             <h1>About me.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>My name is Nikolai Whittaker and I am a web developer based in Ottawa, originally from Barbados. I am equally as comfortable designing and implementing beautiful user interfaces and working with databases and servers.</p>
+            <p>In my free time you can usually find me at a rock climbing gym or reading and sipping an overly expensive espresso in a coffee shop.</p>
             </div>
+            <StaticImage src='../images/icon.png' id="aboutImg" alt='image' style={{ borderRadius : '20px'}}></StaticImage>
+            
           </section>
           
         </IndexWrapper>

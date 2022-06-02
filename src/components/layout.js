@@ -38,20 +38,22 @@ const Global = createGlobalStyle`
 
     //SPacing
     --index-padding:2rem;
-    --paragraph-padding: 30%;
+    --paragraph-padding: 5%;
 
     --card-max:49%;
-    --paragraph-width: 60%;
+    --paragraph-width: 80%;
     --card-height:700px;
 }
 
 @media only screen and (min-width: 1200px){
     //Text Sizes
     --header-text  : 3rem;
-    --secondary-text : 1.4rem;
+    --secondary-text : 1.3rem;
     --paragraph-text : 1.2rem;
 
-    --paragraph-width:700px;
+    --paragraph-width:600px;
+    
+    --card-height:600px;
 }
 
 

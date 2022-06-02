@@ -2,16 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import SectionHeader from './sectionHeader';
 
-const FooterContainer =styled.div`
+const FooterContainer =styled.footer`
 margin-top:5rem;
-hr{
-    width:90%;
-    margin-left:0;
-    margin-bottom:4rem;
-}
-padding-left:1rem;
+display:flex;
+flex-direction:column;
+padding:var(--index-padding);
+
 ul{
-    margin-bottom:4rem;
+    margin-bottom:2rem;
     list-style:none;
     
     padding-left:0;
@@ -46,9 +44,9 @@ const Footer = () =>{
             <h1>Get in Contact.</h1>
             
             <ul>
-                <li><a href='linkedin.com'>Linkedin</a></li>
-                <li><a href='github.com'>Github</a></li>
-                <li><a href='github.com'>Email</a></li>
+                <li><a href='https://www.linkedin.com/in/nikolai-whittaker-6b210aba/'>Linkedin</a></li>
+                <li><a href='https://github.com/omnipoutine'>Github</a></li>
+                <li><a href='mailto:niko.whitt@gmail.com'>Email</a></li>
             </ul>
             <p>Designed and Coded by Nikolai Whittaker 2022</p>
         </FooterContainer>
