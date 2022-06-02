@@ -1,17 +1,23 @@
 ---
 slug: "/project-one"
 date: "2022-02-02"
-title: "01 - Tester Project"
-description: "Short Project Description"
-imglink: "../../images/pexels-henry-&-co-10007531.jpg"
+title: "01 - Adriane Spence"
+description: "Portfolio for Industrial Designer Adriane Spence"
+imglink: "../../images/vale.png"
 ---
-# Tester Project
+# Adriane Spence
 
-## Short Project Description
+## U.I. Design and Development.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+[Link to Project](https://dazzling-pika-20e680.netlify.app/) [Link to Repository](https://github.com/omnipoutine/adriane-spence-portfolio)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Made with Gatsby, a React based open-source framework, using styled components and hosted on Netlify. This web application was designed with a minimal approach allowing the content to speak for itself.
+
+To easily allow content to be published by Adriane, each project page and the about page is created dynamically using Markdown.
+
+
 
 
 

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Card from '../components/card'
 import SectionHeader from '../components/sectionHeader'
 import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image'
+import Meta from '../components/helmet'
 
 const flexColumnCenterCenter =`
 display:flex;
@@ -115,7 +116,9 @@ const Index = ({data}) => {
 
   return(
   <div>
+    <Meta title={data.site.siteMetadata.title} description={data.site.siteMetadata.description} link={data.site.siteMetadata.siteUrl}></Meta>
       <Layout>
+
         <IndexWrapper>
           <div id="headerDiv">
           <h1>Web Developer based in Ottawa. Currently looking for Work</h1>
@@ -168,6 +171,14 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        description
+        siteUrl
+        title
+        titleTemplate
       }
     }
   }

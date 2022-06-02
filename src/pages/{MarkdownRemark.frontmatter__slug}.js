@@ -7,7 +7,7 @@ const ProjectContainer = styled.div`
 
 padding:var(--index-padding);
 padding-top:10rem;
-a{
+#backLink{
   text-transform:uppercase;
   font-weight:300;
   
@@ -16,6 +16,10 @@ a{
   padding-left:0;
 }
 .project-content{
+  a{
+    text-decoration: underline;
+    margin-right:var(--index-padding);
+  }
   h1{
     margin-bottom: var(--project-margin);
   }
@@ -53,7 +57,7 @@ a{
 }
 }
 @media only screen and (min-width:1200px){
-  a{
+  #backLink{
     padding-left:20%;
   }
   padding-top: 30vh;
@@ -83,7 +87,7 @@ const Project = ({data}) => {
           <Layout>
             
             <ProjectContainer>
-            <Link to="/#projects">&larr; Projects</Link>
+            <Link to="/#projects" id='backLink'>&larr; Projects</Link>
             <div className="project-content"
           dangerouslySetInnerHTML={{ __html: html }} ></div>
             </ProjectContainer>

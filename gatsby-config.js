@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Nikolai Whittaker Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    titleTemplate: `%s · Web Developer`,
+    siteUrl: `https://www.yourdomain.tld`,
+    description: `Web Developer based in Ottawa, Ontario, Canada.`,
+    
   },
   plugins: ["gatsby-plugin-styled-components", {
     resolve: 'gatsby-plugin-google-analytics',
@@ -46,6 +49,6 @@ options: {
     },
   ],
 },
-  }
+  }, `gatsby-plugin-react-helmet`
 ]
 };
