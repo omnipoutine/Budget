@@ -73,6 +73,11 @@ padding:var(--index-padding);
       
     }
     
+  }
+  img{
+    -webkit-filter:invert(100%);
+     filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+  }
 
 min-height:100vh;
 border-radius: var(--border-sizing);
@@ -140,7 +145,7 @@ const Index = ({data}) => {
             <p>My name is Nikolai Whittaker and I am a web developer based in Ottawa, originally from Barbados. I am equally as comfortable designing and implementing beautiful user interfaces and working with databases and servers.</p>
             <p>In my free time you can usually find me at a rock climbing gym or reading and sipping an overly expensive espresso in a coffee shop.</p>
             </div>
-            <StaticImage src='../images/icon.png' id="aboutImg" alt='image' style={{ borderRadius : '20px'}}></StaticImage>
+            <StaticImage src='../images/picon.png' id="aboutImg" alt='image' style={{ borderRadius : '20px'}}></StaticImage>
             
           </section>
           
