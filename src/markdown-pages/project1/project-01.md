@@ -23,8 +23,8 @@ To easily allow content to be published by Adriane, each project page and the ab
 
 
 
-![ALT TEXT](../../images/as1.png)
+![Adriane Spence Portfolio Picture 1](../../images/as1.png)
 
-![ALT TEXT](../../images/as2.png)
+![Adriane Spence Portfolio Picture 2](../../images/as2.png)
 
-![ALT TEXT](../../images/as3.png)
+![Adriane Spence Portfolio Picture 3](../../images/as3.png)

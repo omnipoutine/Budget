@@ -104,6 +104,9 @@ padding:1.5rem;
     flex-wrap:wrap;
     justify-content:space-evenly;
   }
+  .cardDivider{
+    margin: 2rem;
+  }
   #about{
     flex-direction:row;
     justify-content:space-evenly;
